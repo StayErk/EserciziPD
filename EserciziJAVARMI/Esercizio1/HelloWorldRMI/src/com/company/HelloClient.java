@@ -12,7 +12,8 @@ public class HelloClient {
     public static void main(String args[]) {
         try {
             logger.info("Cercando l'oggetto remoto...");
-            Hello obj = (Hello) Naming.lookup("rmi://localhost/HelloServer");
+            Hello obj = (Hello) Naming.lookup("" +
+                    "");
             logger.info("Trovato! Invochiamone il metodo...");
             String risultato = obj.dimmiQualcosa("Pippo");
             System.out.println("Ricevuto: " + risultato);
